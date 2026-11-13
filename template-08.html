@@ -1,0 +1,1141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Criador de peças, criativos e banners HTML5 e CSS3 desenvolvido pela Globo.">
+    <meta name="keywords" content="html5, css3, criador, peças, criativo, criador de HTML5, criador de banner, creative, creator, creative creator"/>
+    <meta name="copyright" content="Globo">
+    <meta name="author" content="Bruno Biagioni Neto, William Hessel da Cunha"/>
+    <!-- Social image -->
+    <meta property="og:title" content="Sobrepor Cards - Criador de Peça HTML5CC" />
+    <meta property="og:description" content="Criador de peças, criativos e banners HTML5 e CSS3 desenvolvido pela Globo." />
+    <meta property="og:url" content="https://cgcmd.globo.com/html5cc/" />
+    <meta property="og:image" content="https://cgcmd.globo.com/html5cc/images/share-social.jpg" />
+
+    <title>Parallax - Criador de Peça HTML5CC</title>
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-tour.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/starter-template.css" />
+    <link rel="stylesheet" type="text/css" href="css/template-globo.css" />
+		
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/jquery-ui.structure.min.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/jquery-ui.theme.min.css" />
+
+	<style id="o_durationCSS">
+		#box-ad.animate #imagem_{{X}} {
+			-webkit-animation-name: anima_{{X}}; /* Safari */
+			-moz-animation-name: anima_{{X}}; /* Mozila / Firefox */
+			-o-animation-name: anima_{{X}}; /* Opera */
+			animation-name: anima_{{X}};
+
+			-webkit-animation-duration: {{total_duration}};
+			-webkit-animation-timing-function: ease;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-direction: normal;
+			-webkit-animation-delay: 0;
+			-webkit-animation-play-state: running;
+			-webkit-animation-fill-mode: forwards;
+
+			-moz-animation-duration: {{total_duration}};
+			-moz-animation-timing-function: ease;
+			-moz-animation-iteration-count: 1;
+			-moz-animation-direction: normal;
+			-moz-animation-delay: 0;
+			-moz-animation-play-state: running;
+			-moz-animation-fill-mode: forwards;
+
+			-oo-animation-duration: {{total_duration}};
+			-oo-animation-timing-function: ease;
+			-oo-animation-iteration-count: 1;
+			-oo-animation-direction: normal;
+			-oo-animation-delay: 0;
+			-oo-animation-play-state: running;
+			-oo-animation-fill-mode: forwards;
+
+			animation-duration: {{total_duration}};
+			animation-timing-function: ease;
+			animation-iteration-count: 1;
+			animation-direction: normal;
+			animation-delay: 0;
+			animation-play-state: running;
+			animation-fill-mode: forwards;
+		}
+	</style>
+
+	<style id="o_elemCSS">
+		#imagem_{{X}} {
+				position: absolute; z-index:{{zindeX}}
+		}
+		@-webkit-keyframes anima_{{X}} {
+			0%, {{delay}} {
+				top:{{posicao_e_top}};
+				left: {{posicao_e_left}};
+				-webkit-transform: scale({{zoom_i}});
+				-moz-transform: scale({{zoom_i}});
+				-ms-transform: scale({{zoom_i}});
+				-o-transform: scale({{zoom_i}});
+				transform: scale({{zoom_i}});
+				opacity: {{alpha_i}};
+			}
+			{{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+				top:0px;
+				left:0px;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+				transform: scale(1);
+				opacity: {{alpha_f}};
+			}
+			{{delay_plus5_plusduration}}, 100%  {
+				top:{{posicao_s_top}};
+				left: {{posicao_s_left}};
+				-webkit-transform: scale({{zoom_f}});
+				-moz-transform: scale({{zoom_f}});
+				-ms-transform: scale({{zoom_f}});
+				-o-transform: scale({{zoom_f}});
+				transform: scale({{zoom_f}});
+				opacity: {{alpha_f}};
+			}
+		}
+
+		@-moz-keyframes anima_{{X}} {
+			0%, {{delay}} {
+				top:{{posicao_e_top}};
+				left: {{posicao_e_left}};
+				-webkit-transform: scale({{zoom_i}});
+				-moz-transform: scale({{zoom_i}});
+				-ms-transform: scale({{zoom_i}});
+				-o-transform: scale({{zoom_i}});
+				transform: scale({{zoom_i}});
+				opacity: {{alpha_i}};
+			}
+			{{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+				top:0px;
+				left:0px;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+				transform: scale(1);
+				opacity: {{alpha_f}};
+			}
+			{{delay_plus5_plusduration}}, 100%  {
+				top:{{posicao_s_top}};
+				left: {{posicao_s_left}};
+				-webkit-transform: scale({{zoom_f}});
+				-moz-transform: scale({{zoom_f}});
+				-ms-transform: scale({{zoom_f}});
+				-o-transform: scale({{zoom_f}});
+				transform: scale({{zoom_f}});
+				opacity: {{alpha_f}};
+			}
+		}
+		@-o-keyframes anima_{{X}} {
+			0%, {{delay}} {
+				top:{{posicao_e_top}};
+				left: {{posicao_e_left}};
+				-webkit-transform: scale({{zoom_i}});
+				-moz-transform: scale({{zoom_i}});
+				-ms-transform: scale({{zoom_i}});
+				-o-transform: scale({{zoom_i}});
+				transform: scale({{zoom_i}});
+				opacity: {{alpha_i}};
+			}
+			{{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+				top:0px;
+				left:0px;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+				transform: scale(1);
+				opacity: {{alpha_f}};
+			}
+			{{delay_plus5_plusduration}}, 100%  {
+				top:{{posicao_s_top}};
+				left: {{posicao_s_left}};
+				-webkit-transform: scale({{zoom_f}});
+				-moz-transform: scale({{zoom_f}});
+				-ms-transform: scale({{zoom_f}});
+				-o-transform: scale({{zoom_f}});
+				transform: scale({{zoom_f}});
+				opacity: {{alpha_f}};
+			}
+		}
+		@keyframes anima_{{X}} {
+			0%, {{delay}} {
+				top:{{posicao_e_top}};
+				left: {{posicao_e_left}};
+				-webkit-transform: scale({{zoom_i}});
+				-moz-transform: scale({{zoom_i}});
+				-ms-transform: scale({{zoom_i}});
+				-o-transform: scale({{zoom_i}});
+				transform: scale({{zoom_i}});
+				opacity: {{alpha_i}};
+			}
+			{{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+				top:0px;
+				left:0px;
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-ms-transform: scale(1);
+				-o-transform: scale(1);
+				transform: scale(1);
+				opacity: {{alpha_f}};
+			}
+			{{delay_plus5_plusduration}}, 100%  {
+				top:{{posicao_s_top}};
+				left: {{posicao_s_left}};
+				-webkit-transform: scale({{zoom_f}});
+				-moz-transform: scale({{zoom_f}});
+				-ms-transform: scale({{zoom_f}});
+				-o-transform: scale({{zoom_f}});
+				transform: scale({{zoom_f}});
+				opacity: {{alpha_f}};
+			}
+		}
+		.content-img{
+			padding: 5px 5px 5px 5px;
+			position: relative;
+		}
+		.slider-container{
+			margin: 0 !important;
+			height: 50px;
+			display: grid;
+			align-items: center;
+		}
+		.ui-slider-handle.ui-corner-all.ui-state-default {
+			border-radius: 15px;
+			background-color: #009688;
+			border: 1px solid #009688;
+			top: -7px;
+		}
+		.btn-image{
+			padding: 0 20px 0 0;
+		}
+		.ui-widget-header {
+			background: #009688;
+			height: 4px !important;
+			border: 0px !important;
+			top: 0px !important;
+		}
+		.ui-slider-horizontal {
+			height: 4px;
+			background: grey !important;
+			border: unset !important;
+			top: 2px;
+		}
+		.edit-positions{
+			background-color: #ececec;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			text-align: center;
+			height: 25px;
+		}
+		.edit-positions p{
+			margin: unset;
+			padding-right: 5px;
+			color: #333;
+		}
+		.edit-positions i{
+			color: #333;
+			padding-right: 5px;
+		}
+		.modal-dialog{
+			width: 50% !important;
+		}
+		.modal-body{
+			display: flex;
+		}
+		.modal-body .modal-container .modal-item{
+			padding: 5px 5px;
+			position: relative;
+			height: auto;
+			display: flex;
+			justify-content: center;
+		}
+		.modal-item .item-modal{
+			height: 100%;
+		}
+		.modal-item .item-modal .item-content{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+		.modal-item .item-modal .item-content .item-preview{
+			width: 80%;
+			background: #f1f1f1;
+			margin: 40px 5px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0%;
+		}
+		.modal-item .item-modal .item-content .item-preview .item-all{
+			border: 3px dashed #333;
+			width: 100%;
+			background: #f1f1f1;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			margin: 0;
+			padding: 0;
+			border-left: unset;
+			border-right: unset;
+		}
+		.list-img{
+			padding-top: 10px; 
+			padding-bottom: 10px; 
+			display: flex;
+			justify-content: center;
+		}
+		.list-img button#btnAdd{
+			border-radius: 25px;
+			height: 50px;
+			width: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.list-img button#btnAdd p{
+			font-size: 2em;
+			padding: unset;
+			margin: unset;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50px;
+			height: 7px;
+			margin-top: -5px;
+		}
+		.modal-item .item-modal .item-content .item-preview .item-move{
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			background: #fff;
+			width: 100%;
+			max-width: 100%;
+			border-left: unset !important;
+			border-right: unset !important;
+		}
+		.modal-item .item-modal.item-inicio .item-content .item-preview .item-move{
+			background-color: #00800040;
+		}
+		.text-parallax{
+			display: flex;
+			position: absolute;
+			height: 100%;
+			top: -15px;
+			margin-left: 18%;
+			border-right: 1px dashed #333;
+			border-left: 1px dashed #333;
+			margin-top: 5px;
+			width: 80%;
+			padding: 0;
+		}
+		.parallax-visual{
+			position: relative;
+			display: none;
+		}
+		.text-parallax .text-start{
+			position: absolute;
+			left: 3px;
+		}
+		.text-parallax .text-end{
+			right: 3px;
+			position: absolute;
+		}
+		.text-parallax .text-call{
+			position: relative;
+			width: 100%;
+			text-align: center;
+			font-size: 1em;
+		}
+		.modal-item .item-modal.item-fim .item-content .item-preview .item-move{
+			background-color: #ff000040;
+		}
+		.modal-item .item-modal .item-title{
+			background-color: #ececec;
+			color: #000;
+			text-align: center;
+			border-radius: 3px;
+			padding: 10px;
+		}
+		.modal-header{
+			width: 100%;
+			text-align: center;
+		}
+		.modal-footer{
+			color: #009688;
+		}
+		.modal-footer .btn-salvar{
+			background-color: #009688;
+			color: #fff;
+		}
+		.modal-footer .btn-fechar{
+			border: unset;
+		}
+		.btnImage{
+			width: 100%;
+			height: 50px;
+			position: relative;
+			text-align: center;
+			margin: 10px auto;
+			box-sizing: border-box;
+			border-radius: 3px;
+			border: unset;
+			background-color: #009688;
+			color: #fff;
+			cursor: pointer;
+		}
+		#iframePecaHTML5{
+			width: 100%;
+			height: 100%;
+			border: unset;
+			margin: unset;
+		}
+		.parallax-preview .preview-line{
+			width: 100%;
+    	padding: 0 20%;
+			padding-top: 25px;
+			padding-bottom: 0;
+			height: 85vh;
+		}
+		.parallax-preview .preview-line:last-child{
+			padding-top: 0;
+			padding-bottom: 25px;
+		}
+		#preview{
+			background-color: #f1f1f1;
+			margin: 25px auto;
+		}
+		.btn-preview .btn {
+    pointer-events: unset;
+		}
+	</style>
+
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-tour.js"></script>
+<script type="text/javascript" src="bootstrap/js/jquery-ui.min.js"></script>
+
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-69925233-3', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="js/tour-pages.js"></script>
+<script type="text/javascript" src="js/jquery-browser.js"></script>
+<script src="dist/jszip.min.js"></script>
+<script src="vendor/FileSaver.js"></script>
+<script type="text/javascript">
+
+var newPecaHTML5, oldPecaHTML5;
+var sz = window.location.search.replace("?","").replace("#","").split("x");
+var finalW = sz[0];
+var finalH = sz[1];
+
+bannerSize = [finalW,finalH];
+
+//configura o botão de file upload
+	function setConfig(){
+
+		// ADICIONA OS HANDLERS
+
+		document.getElementById('File1').addEventListener('change', function(e){readSingleFile("File1", true)}, false);
+		// document.getElementById('File2').addEventListener('change', function(e){readSingleFile("File2")}, false);
+		// document.getElementById('File3').addEventListener('change', function(e){readSingleFile("File3")}, false);
+		// document.getElementById('File4').addEventListener('change', function(e){readSingleFile("File4")}, false);
+		// document.getElementById('File5').addEventListener('change', function(e){readSingleFile("File5")}, false);
+	}
+
+</script>
+
+
+</head>
+
+<body class="interna">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo plat-logo" href="https://cgcmd.globo.com/plat/" title="Plat" target="_blank"></a>
+                <a class="logo tvglobo-logo" href="./" title="Plat"></a>
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="display:none">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                <li class="tour7"><a href="http://anuncie.globo.com/redeglobo/formatos/index.html" target="_blank">Manuais de Formatos TV Globo</a></li>
+                  <li class="tour8"><a href="./perguntas-frequentes.html">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>
+                        Parallax <a href="index.html" class="pull-right btn btn-default"><i class="fa fa-arrow-left"></i> Voltar aos templates</a>
+                        <div class="btn btn-default pull-right" id="tour2" ><i class="fa fa-graduation-cap"></i> Como usar</div>
+                    </h2>
+                    <p>As imagens vão se sobrepondo conforme o scroll do mouse.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="background:#fff">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <h3>
+                    Formato
+									<div class="btn-group">
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+													<span class="formato_selecionado">300 x 250 - Retângulo Médio</span> <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" role="menu">
+													<li><a href="#" data-formato="300x50">300 x 50 - Banner Mobile</a></li>
+													<li><a href="#" data-formato="320x50">320 x 50 - Banner Mobile</a></li>
+													<li><a href="#" data-formato="300x250">300 x 250 - Retângulo Médio</a></li>
+													<li><a href="#" data-formato="300x600">300 x 600 - Meia Página</a></li>
+													<li><a href="#" data-formato="600x300">600 x 300 - Megabox</a></li>
+													<li><a href="#" data-formato="970x90">970 x 90 - Superleaderboard</a></li>
+													<li><a href="#" data-formato="970x150">970 x 150 - Maxiboard</a></li>
+													<li><a href="#" data-formato="970x250">970 x 250 - Billboard</a></li>
+											</ul>
+									</div>
+                </h3>
+
+                <br>
+
+                <div class="alert alert-warning" role="alert" id="alert-formato">
+                    <strong>Aviso:</strong> Selecione o tipo de formato no Dropdown acima.
+								</div>
+								<div class="parallax-visual">
+									<div class="col-md-offset-2 col-md-8 text-parallax">
+										<div class="text-start">
+											Início Scroll
+										</div>
+										<div class="text-end">
+											Final Scroll
+										</div>
+										<div class="text-call">
+											Linha do tempo
+										</div>
+									</div>
+									<ul id="liTemplate" class="nav nav-pills nav-timeline">
+										<li id="layer_1" class="list-img col-md-12 col-lg-12">
+											<div class="btn-image col-md-2 col-lg-2">
+												<a href="#">
+													<div class="content-img add">
+														<div class="name">Imagem 1</div>
+														<button class="btn btn-xs btn-primary" onclick="$('#File1').click();">Adicionar</button>
+														<input id="File1" class="btn btn-xs btn-primary" style="display:none" type="file" ></input>
+														<div class="img-thumb">
+																<img src="images/img-default.png" alt="" id="demoFile1">
+														</div>
+													</div>
+												</a>
+												<a href="#" class="editPos setup" data-toggle="modal" data-target="#myModal_1">
+													<div class="edit-positions"
+													id="edit_1" >
+														<p>Editar Posições</p>
+														<i class="fa fa-pencil"></i>
+													</div>
+												</a>
+											</div>
+											<div class="col-md-10 slider-container">
+												<div class="sliderRange"></div>
+											</div>
+											<!-- Modal content-->
+											<div id="myModal_1" class="modal fade" role="dialog">
+													<div class="modal-dialog">
+												
+														
+														<div class="modal-content">
+															<div class="modal-header">
+																<h4 class="modal-title">Configuração da posição</h4>
+															</div>
+															<div class="modal-body">
+																<div class="modal-container col-md-12 col-lg-12">
+																	<div class="modal-item col-md-6 col-lg-6">
+																		<div class="item-inicio col-md-12 col-lg-12 item-modal">
+																			<div class="item-title col-md-12 col-lg-12">
+																				Configuração Inicial
+																			</div>
+																			<div class="item-content col-md-12 col-lg-12">
+																				<div class="item-preview item-drag-start">
+																					<div class="item-all"></div>
+																					<div class="item-move item-m-start"></div>
+																				</div>
+																			</div>
+																		</div>
+			
+																	</div>
+																	<div class="modal-item col-md-6 col-lg-6">
+																		<div class="item-fim col-md-12 col-lg-12 item-modal">
+																			<div class="item-title col-md-12 col-lg-12">
+																				Configuração Final
+																			</div>
+																			<div class="item-content col-md-12 col-lg-12">
+																				<div class="item-preview item-drag-end">
+																					<div class="item-all"></div>
+																					<div class="item-move item-m-end"></div>
+																				</div>
+																			</div>
+																		</div>
+			
+																	</div>
+																</div>
+															</div>
+															<div class="modal-footer">
+																<div type="button" onclick="preview(true)" class="btn btn-salvar" data-dismiss="modal">OK</div>
+															</div>
+														</div>
+												
+													</div>
+												</div>
+											<!-- fim modal -->
+
+										</li>
+										
+									</ul>
+									
+											<div class="btnAll list-img col-md-2">
+													<button id="btnAdd" type="button" class="btn btn-primary">
+														<p>
+																+
+														</p>
+													</button>
+											</div>
+									
+									
+									
+								</div>
+            </div>
+				</div>
+				<div class="row" style="border-top: 2px solid #D9E0E9;">
+					<div class="col-sm-12">
+							<div class="parallax-preview">
+								<div class="col-sm-12">
+									<h4>Testar Peça</h4>
+									<div class="pull-left btn-preview">
+											<button class="btn btn-default bt_ready" onclick="preview(true)"  ><i class="fa fa-search"></i> Preview da peça</button>
+									</div>
+								</div>
+								<img class="preview-line" src="images/parallax.png">
+								<div id="preview" >
+									<iframe sandbox="allow-same-origin allow-top-navigation allow-scripts " id="iframePecaHTML5">
+									</iframe>
+								</div>
+								<img class="preview-line" src="images/parallax.png">
+							</div>
+					</div>
+				</div>
+
+        <div class="row footer-timeline">
+						<!-- <div class="col-sm-10 text-right" style="margin-top: 35px;">
+							<h4 style="width: 98%; float: left;">DFP:
+								<p style="font-size: 12px; margin: 0;">(Custom Creative)</p>
+								<p style="font-size: 12px; margin: 0;">Necessário desabilitar a opção Safe Frame no DFP</p>
+							</h4>
+							<input type="checkbox" name="destino" value="DFP" style="margin-top: 13px;">
+						</div> 
+					
+					When active's DFP module, need change col-sm-12 to col-sm-2 in Download ZIP container
+				-->
+            <div class="col-sm-12 text-right btn-down">
+                <h4>Download ZIP</h4>
+                <div class="btn-preview">
+                    <button class="btn btn-default  bt_ready"  onclick="Salvar(true)" disabled><i class="fa fa-download"></i> Baixar Pacote Flow</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+		
+
+
+    <!-- Modal de mensagem do Tour -->
+    <div class="modal fade" id="modalEscape" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">FIM DO TOUR!</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="images/obrigado-tour.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- TEMPLATE ENTRA AQUI DENTRO DO MODAL COMPLETE-DIALOG -->
+
+
+<div id="complete-dialog" class="modal fade" tabindex="-1">
+	<div class="modal-dialog" style="margin-top:100px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title">Resultado da peça HTML5</h4>
+			</div>
+			<div class="modal-body">
+				
+				<div id="pecaHTML5" class="">
+					<style>
+							body{
+								margin: unset;
+								}
+					</style>
+						<a id='linkPeca'  target="_blank">
+							<div id="objeto" style="background:#000;overflow:hidden">
+							</div>
+						</a>
+					<script type="text/javascript">
+						var timerTouchMove = 0;
+						var eventTouchMove;
+	
+						if (document.createEvent) {
+							eventTouchMove = document.createEvent("HTMLEvents");
+							eventTouchMove.initEvent("moving", true, true);
+						} else {
+							eventTouchMove = document.createEventObject();
+							eventTouchMove.eventType = "moving";
+						}
+	
+						eventTouchMove.eventName = "moving";
+	
+						handlerScrollStart = function(e){
+							scrollTopY =  ('pageXOffset' in top) ? top.pageYOffset : top.document.documentElement.scrollTop;
+							for(item in triggers)
+								triggers[item].updatePosition();
+						};''
+	
+						handlerTouchStart = function(e){
+							clearInterval(timerEndTouch);
+							clearInterval(timerTouchMove);
+							timerTouchMove = setInterval(function(){
+								if (document.createEvent) {
+										document.dispatchEvent(eventTouchMove);
+								} else {
+									document.fireEvent("on" + eventTouchMove.eventType, eventTouchMove);
+								}
+							},30);
+						};
+						
+						var timerEndTouch=0;
+						handlerTouchEnd = function(e){
+							timerEndTouch = setTimeout(function(){clearInterval(timerTouchMove);},3000);
+						};
+
+	ParallaxElement = function(be,el,animation,inicialPosition,finalPosition,startTarget,endTarget,zindex){
+			if(window.frameElement!=null){
+					this.startTargetO = startTarget;
+					this.endTargetO = endTarget;
+					this.sangria = 0.2;
+					this.baseObject = typeof(document.getElementById(be))!='undefined'?document.getElementById(be):"";
+					this.targetObject = typeof(document.getElementById(el))!='undefined'?document.getElementById(el):"";
+					this.start = (typeof(this.baseObject)!='undefined'?this.baseObject.offsetTop+window.frameElement.getBoundingClientRect().top+top.pageYOffset+Number(this.baseObject.style.height.replace("px",""))*(this.sangria):1)-screen.height;
+					this.end = (typeof(this.baseObject)!='undefined'?this.baseObject.offsetTop+window.frameElement.getBoundingClientRect().top+top.pageYOffset+Number(this.baseObject.style.height.replace("px",""))*(1-this.sangria):1);
+					this.inicialPosition = inicialPosition!=null?inicialPosition:0;
+					this.finalPosition = finalPosition!=null?finalPosition:-Number(this.targetObject.style.height.replace("px",""));
+					this.scrollTopY;
+					this.animation = animation;
+					this.startTarget = this.start - (startTarget*(this.start-this.end));
+					this.endTarget = this.end + (endTarget*(this.start-this.end));
+					this.positionRelative;
+					this.pc;
+					this.zindex = zindex;
+	
+					// config inicial
+	
+					if(typeof(this.baseObject)!='undefined'){
+	
+							this.baseObject.style.position = "relative";
+							this.targetObject.style.position = "absolute";
+							this.targetObject.style.top = this.inicialPosition+"px";
+							this.targetObject.style.zIndex = this.zindex;
+	
+					}
+	
+	
+			// Mesmo do prototype
+	
+					this.scrollTopY = ('pageXOffset' in top) ? top.pageYOffset : top.document.documentElement.scrollTop;
+	
+	
+							this.pc = 1+((this.endTarget-this.scrollTopY)/(this.startTarget-this.endTarget));
+	
+							if((this.inicialPosition - this.finalPosition)>0){
+									this.positionRelative = this.inicialPosition - this.pc*(this.inicialPosition - this.finalPosition);
+									this.targetObject.style.top = this.positionRelative+"px";
+	
+							}else{
+									this.positionRelative = this.inicialPosition + (this.pc)*Math.abs(this.inicialPosition - this.finalPosition);
+									this.targetObject.style.top = this.positionRelative+"px";
+	
+							}
+				// }
+						}
+	}
+	ParallaxElement.prototype.updatePosition = function(){
+		if(window.frameElement!=null){
+					this.scrollTopY = ('pageXOffset' in top) ? top.pageYOffset : top.document.documentElement.scrollTop;
+					this.start = (typeof(this.baseObject)!='undefined'?this.baseObject.offsetTop+window.frameElement.getBoundingClientRect().top+top.pageYOffset+Number(this.baseObject.style.height.replace("px",""))*(this.sangria):1)-screen.height;
+					this.end = (typeof(this.baseObject)!='undefined'?this.baseObject.offsetTop+window.frameElement.getBoundingClientRect().top+top.pageYOffset+Number(this.baseObject.style.height.replace("px",""))*(1-this.sangria):1);
+					this.startTarget = this.start - (this.startTargetO*(this.start-this.end));
+					this.endTarget = this.end + (this.endTargetO*(this.start-this.end));
+	
+					if(this.scrollTopY>=this.startTarget-150 && this.scrollTopY<=this.endTarget+150){
+	
+							this.pc = 1+((this.endTarget-this.scrollTopY)/(this.startTarget-this.endTarget));
+	
+							if((this.inicialPosition - this.finalPosition)>0){
+									this.positionRelative = this.inicialPosition - this.pc*(this.inicialPosition - this.finalPosition);
+	
+	
+							}else{
+									this.positionRelative = this.inicialPosition + (this.pc)*Math.abs(this.inicialPosition - this.finalPosition);
+	
+	
+							}
+	
+					
+								this.targetObject.style.top = this.positionRelative+"px";
+						
+	
+				 }
+				}
+	
+	}
+	var t1,t2 = 0;
+	triggers = [];
+	
+	</script>
+
+	<script id="triggerScript">
+	</script>
+
+	<script>
+	if(window!=top){
+		top.addEventListener("scroll", handlerScrollStart);
+		top.addEventListener("touchmove", handlerScrollStart);
+	
+	}
+	
+	
+	
+	</script>
+	
+
+
+
+				</div>  <!-- Fim pecaHTML5 -->
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    <!-- TEMPLATE TERMINA AQUI -->
+
+
+		<canvas id="canvas" style="display:none"></canvas>
+
+	</body>
+	<script>
+		let dados = [];
+		setBarsData = function(id){
+			let el = $("#"+id)
+			console.log(el.attr('id'))
+			let li_id = el.attr('id')
+			console.log(el.children('.slider-container').children('.sliderRange').children('.ui-slider-range')[0])
+			el.attr("data-bar-start", parseInt(
+				el.children('.slider-container').children('.sliderRange').children('.ui-slider-range')[0].style.left
+			))
+
+			el.attr("data-bar-end", parseInt(
+				el.children('.slider-container').children('.sliderRange').children('.ui-slider-range')[0].style.width) + parseInt(el.children('.slider-container').children('.sliderRange').children('.ui-slider-range')[0].style.left
+			))
+		}
+		setModalData = function(id){
+			console.log("SETUP MODAL2")
+			let el = $("#"+id)
+			console.log(el)
+			let li_id = el.attr('id')
+			var dataImg = parseInt(el.attr("data-img-height"))
+			var totalGeral = (2*parseInt(dataImg))  + parseInt(finalH)
+			var posStart = el.children(".modal").find(".item-move")[0].offsetTop
+		
+			var posEnd = el.children(".modal").find(".item-move")[1].offsetTop
+			var configStart = parseInt(((posStart / 600) * totalGeral ) - dataImg)
+			var configEnd = parseInt(((posEnd / 600) * totalGeral ) - dataImg)
+
+			el.attr("data-modal-start", parseInt(configStart) )
+			el.attr("data-modal-end",parseInt(configEnd) )
+
+		}
+
+		getResults = function(){
+			
+			$('#liTemplate li').each(function() {
+
+				let li_id = $(this).attr('id')
+
+				dados[li_id] = {
+					"TimeStart" : 
+						parseInt(
+							$(this).attr("data-bar-start")
+						)/100, 
+					"TimeEnd" : 
+						(100 - parseInt(
+							$(this).attr("data-bar-end")
+						))/100, 
+					"PosStart" : 
+						parseInt(
+							$(this).attr("data-modal-start")
+						),
+					"PosEnd" : 
+						parseInt(
+							$(this).attr("data-modal-end")
+						)
+				}
+			});
+			return dados;
+		}
+
+		setUpSliders = function(elem){
+			$("#"+elem+" .ui-slider-range").remove();
+			$( function() {
+				var sliderAll = $("#"+elem+" .sliderRange")
+		
+				sliderAll.slider({
+					range: true,
+					min: 0,
+					max: 100,
+					values: [ 0, 100 ]
+				});
+			
+			});
+
+		}
+			
+			let itens = {};
+			$(".btn-add-image").click(function(e){
+				console.log(itens++)
+		
+			})
+		</script>
+
+	
+	<script type="text/javascript" src="js/geradorHTML5.js"></script>
+
+
+	<script>
+		
+		$(function(){
+			$(".formato_selecionado").text($(".dropdown-menu li a[data-formato='"+window.location.search.replace("?","").replace("#","")+"']").text());
+			$(".dropdown-menu li a").click(function(){
+				window.location.href = window.location.href.replace(window.location.search,"").replace("#","") + "?" + $(this).data("formato");
+			});
+		});
+
+
+		
+	$(document).ready(function () {
+			
+			let soma = 1;
+			let nElement = '';
+			
+			if(finalH){
+				$(".parallax-visual").css("display", "block")
+			}
+		
+
+			$('#preview').width(finalW)
+			$('#preview').height(finalH)
+			
+
+			$("#btnAdd").click(function(){
+				if (soma <= 4){
+					soma++
+					nElement = $(".parallax-visual ul").children().first().clone()[0];
+					nElement.id="layer_" + soma;
+					
+					
+					$(".parallax-visual ul").append(nElement);
+					$('#'+nElement.id+' #demoFile1').attr("id", "demoFile"+soma);
+					$('#'+nElement.id+' button').attr("onclick","$('#File"+soma+"').click();");
+					$('#'+nElement.id+' input').attr("id", "File"+soma);
+					$('#'+nElement.id+' .edit-positions').attr('id', 'edit_'+soma);
+					$('#'+nElement.id+' .editPos').attr('data-target', '#myModal_'+soma);
+					$('#'+nElement.id+' .editPos').addClass('setup');
+					$('#'+nElement.id+' .img-thumb>img').attr('src','images/img-default.png');
+					$('#'+nElement.id+' .modal').attr('id', 'myModal_'+soma);
+					
+					setUpSliders(nElement.id);
+					setUpModal(nElement.id);
+					// $("#"+nElement.id+" .editPos").click(function(el){
+					// 	setUpModal(el.target.closest("li").id)
+					// });
+					
+					
+					$('#'+nElement.id).attr('data-modal-start', -($('#'+nElement.id).attr('data-img-height')-finalH)/2);
+					$('#'+nElement.id).attr('data-modal-end', -($('#'+nElement.id).attr('data-img-height')-finalH)/2);
+					$('#'+nElement.id).attr('data-bar-start', 0);
+					$('#'+nElement.id).attr('data-bar-end', 100);
+
+					
+
+					document.querySelector("#"+nElement.id+" .modal").addEventListener("mouseup", function(e){setModalData(e.target.closest("li").id)});
+					document.querySelector("#"+nElement.id+" .slider-container").addEventListener("mouseup", function(e){setBarsData(e.target.closest("li").id)});
+
+					console.log($('#'+nElement.id+' .edit-positions'))
+					document.getElementById('File'+soma).removeEventListener('change', function(e){readSingleFile("File1", true)}, false);
+					document.getElementById('File'+soma).addEventListener('change', function(e){soma=e.target.id.replace("File","");readSingleFile("File"+soma, true)}, false);
+				}
+				if (soma > 4) {
+					$('.btnAll').remove();
+				}
+			});
+
+			
+			updateVisual = function() {
+				//$('#objeto').html("");
+			
+				myObjects = getResults();
+				triggers = [];
+				var stringTriggers = "var triggers = [";
+				for (item in myObjects){
+					
+					let index = item.split("_")[1];
+					let imgF = img["File"+index];
+
+					
+					let elDiv = document.querySelector('#imag'+index)
+					if( elDiv == undefined )
+						$('#objeto').append('<div id="imagem'+index+'"><img id="imag'+index+'" class="imag'+index+'"  data-macroname=""></div>');
+					
+					$('#objeto').css('height', finalH)
+					$('#objeto').css('width', finalW)
+					$('#linkPeca').attr('href', '%%CLICK_URL_UNESC%%%%DEST_URL%%')
+					
+					triggers.push(new ParallaxElement("objeto", "imagem"+index, "easeInOut", myObjects[item].PosStart, myObjects[item].PosEnd, myObjects[item].TimeStart, myObjects[item].TimeEnd,index))
+
+					stringTriggers += "new ParallaxElement\(\"objeto\", \"imagem"+index+"\", \"easeInOut\", "+myObjects[item].PosStart+", "+myObjects[item].PosEnd+", "+myObjects[item].TimeStart+", "+myObjects[item].TimeEnd+", "+index+" ),";
+
+				}
+				stringTriggers += "];";
+				console.log(stringTriggers)
+				$("#triggerScript").html()
+				$('#pecaHTML5').find("#triggerScript").html(stringTriggers)
+				
+				
+			}
+
+			setUpModal = function(elem){
+			
+				let base = '';
+				let total = '';
+				const image = typeof(imgInfo["File"+elem.replace("layer_","")])!="undefined"?imgInfo["File"+elem.replace("layer_","")].h:0;
+				console.log("------>"+image)
+				let el = $("#"+elem);
+				console.log(el)
+				console.log(el.length)
+				if(image){
+					$(".bt_ready").removeAttr("disabled","");
+				}
+				base = parseInt(bannerSize[1]);
+				total = base + (image*2);
+				$("#"+elem)[0].setAttribute("data-img-height", image)
+
+				$("#"+elem).attr('data-modal-start', -($("#"+elem).attr('data-img-height')-finalH)/2);
+				$("#"+elem).attr('data-modal-end', -($("#"+elem).attr('data-img-height')-finalH)/2);
+				$("#"+elem).attr('data-bar-start', 0);
+				$("#"+elem).attr('data-bar-end', 100);
+
+				//$("#"+elem+" .editPos").click(function(el) {
+
+					if(el.find('.editPos')[0].classList.contains("setup")){
+					
+						$(function() {
+							$("#"+elem)[0].setAttribute("data-img-height", image)
+							$("#"+elem+" .item-preview").css("height", 601)
+							$("#"+elem+" .item-all").css("height", (base*100/total)+"%")
+							$("#"+elem+" .item-move").css("height", (image*100/total)+"%")
+							$("#"+elem+" .item-move").css("top", "unset")
+						});
+						$( function() {
+							$( "#"+elem+" .item-m-start" ).draggable({containment: "#"+elem+" .item-drag-start",});
+						} );
+						$( function() {$( "#"+elem+" .item-m-end" ).draggable({containment: "#"+elem+" .item-drag-end",});
+						} );
+					}
+					$("#"+elem+" .editPos").removeClass("setup");
+					createVisual()
+		//	});
+		}
+
+			createVisual = function(){
+				console.log( $("#objecto") )
+			}
+
+			if(window.location.href.indexOf("?" || "x") > -1) {
+				$('.nav-timeline').slideDown();
+			} else {
+				$('#alert-formato').slideDown();
+				$(".formato_selecionado").text('Selecione o Formato');
+			}
+			//$("#link-formato").attr('href',$("#link-formato").attr('href').replace(window.location.search,"") + window.location.search.replace("#",""));
+
+			setUpSliders("layer_1");
+			setUpModal("layer_1");
+			// $(".editPos").click(function(el){
+			// 		setUpModal(el.target.closest("li").id)
+			// 	});
+				document.querySelector("#layer_1 .modal").addEventListener("mouseup", function(e){setModalData(e.target.closest("li").id)});
+				document.querySelector("#layer_1 .slider-container").addEventListener("mouseup", function(e){setBarsData(e.target.closest("li").id)});
+				$("#layer_1").attr('data-modal-start', -($("#layer_1").attr('data-img-height')-finalH)/2);
+					$("#layer_1").attr('data-modal-end', -($("#layer_1").attr('data-img-height')-finalH)/2);
+					$("#layer_1").attr('data-bar-start', 0);
+					$("#layer_1").attr('data-bar-end', 100);
+			
+	});
+		
+	</script>
+
+</html>
+

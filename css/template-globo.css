@@ -1,0 +1,397 @@
+body {padding-top: 50px; padding-bottom: 20px; background:#D9E0E9; /*min-width: 1008px*/}
+
+.container {/*min-width: 1008px*/}
+
+.jumbotron {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #fff;
+}
+
+.jumbotron h1 {font-size: 24px}
+
+.jumbotron p {font-size: 16px}
+
+.interna .jumbotron {
+	padding-top: 25px;
+	padding-bottom: 25px;}
+
+
+.nav-justified>li>a {text-align: left; cursor: default;}
+.nav-timeline.nav-pills>li>a {border-radius: 0;} 
+
+.add.content-img {background: #79858C;}
+.add.content-img:hover {background: #42505A;}        
+
+.content-img {background: #2DB1C0;}
+.content-img:hover {background: #00747D;}
+
+.change-image.image-custom .btn{cursor: default}
+.modal .msgImg {margin: 0}
+
+
+.nav-timeline.nav>li>a{padding: 0; clear: both;}
+.content-img{height: 50px; width: auto; vertical-align: top; display: float: left; padding: 5px 5px 5px 60px;}
+
+.content-img {font-size: 12px; color: #000;}
+.name {text-decoration: none; color: #fff!important;}
+
+.action-img {width:50px; background:#FFF; height:50px; float:left; padding: 0; cursor: pointer;}        
+.img-thumb {max-height:46px; max-width: 100px; position:absolute; top:2px; right:2px; overflow: hidden; border: 1px solid #fff; background: url(../images/bg-thumb-img.png);}
+.img-thumb img {max-height: 44px; max-width: 100px }
+
+.add .img-thumb {border: 1px solid #fff}
+
+.add.action-img {background:#fff; border: 2px solid #fff; border-width: 0 1px; border-collapse: separate}
+.action-img:hover {background:#D9E0E9}
+
+	/*.nav li a*/
+
+.content-adv-img {position: relative; height: 50px; margin: 0 /*-15px; border-right: 1px solid #ccc*/}
+.content-adv-img .action-img.ileft {position: absolute; left: 0; top: 0}
+.content-adv-img .content-img {position: absolute; left: 50px; right: 50px; top: 0; height: 50px; padding: 4px}
+.content-adv-img .action-img.iright {position: absolute; right: 0; top: 0}
+
+
+
+.thumb-animation {background-position:50% 50%; margin-right: 10px; cursor: pointer; width: 50px; height: 50px; float: left}
+.thumb-animation:hover {background-color: #D9E0E9}
+.thumb-animation.active {background-color: #2DB1C0}
+
+
+.block-efects {display: inline-block; width: 100%; clear: both; margin-bottom: 20px}
+
+/*slide*/
+.slide-left {background-image: url(../images/slide-from-left.png)} 
+.slide-left:hover {background-image: url(../images/slide-from-left.gif)} 
+
+.slide-top {background-image: url(../images/slide-from-top.png)} 
+.slide-top:hover {background-image: url(../images/slide-from-top.gif)} 
+
+.slide-right {background-image: url(../images/slide-from-right.png)} 
+.slide-right:hover {background-image: url(../images/slide-from-right.gif)} 
+
+.slide-bottom {background-image: url(../images/slide-from-bottom.png)} 
+.slide-bottom:hover {background-image: url(../images/slide-from-bottom.gif)} 
+
+/*sobrepor*/
+.sobrepor-left {background-image: url(../images/sobrepor-from-left.png)} 
+.sobrepor-left:hover {background-image: url(../images/sobrepor-from-left.gif)} 
+
+.sobrepor-top {background-image: url(../images/sobrepor-from-top.png)} 
+.sobrepor-top:hover {background-image: url(../images/sobrepor-from-top.gif)} 
+
+.sobrepor-right {background-image: url(../images/sobrepor-from-right.png)} 
+.sobrepor-right:hover {background-image: url(../images/sobrepor-from-right.gif)} 
+
+.sobrepor-bottom {background-image: url(../images/sobrepor-from-bottom.png)} 
+.sobrepor-bottom:hover {background-image: url(../images/sobrepor-from-bottom.gif)} 
+
+/*Zoom*/
+.zoom-out {background-image: url(../images/zoom-out.png)} 
+.zoom-out:hover {background-image: url(../images/zoom-out.gif)} 
+
+.zoom-in {background-image: url(../images/zoom-in.png)} 
+.zoom-in:hover {background-image: url(../images/zoom-in.gif)} 
+
+
+.add-effect {background-image: url(../images/add-efect.png)} 
+.zoom-in:hover {opacity: 0.8} 
+
+.nocursor {cursor: default}
+
+/*tab */
+
+
+.nav-custom>li>a {border-radius: 0;-webkit-transition: opacity .15s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+	opacity: 1;
+}
+.nav-custom .tab-content{background: #fff; padding: 25px 15px 5px}
+.nav-custom>li>a:focus, .nav-tabs>li>a:hover {color: #000}
+.nav-custom .nav-tabs li a{border-top: 3px solid transparent}
+.nav-custom .nav-tabs li.active a{border-top:3px solid #21B1C1!important; color: #000}
+/*bootstrap forms*/
+
+.btn-primary {background: #21B1C1; border-color: #188693}
+.btn-primary:hover {background: #188693}
+
+.bs-callout-primary {
+	border-left-color: #188693 !important;
+	font-size: 15px !important;
+}
+.bs-callout {
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+
+.opaca{
+	opacity:0.2 !important;
+}
+
+/* Ajusta alinhamento no header*/
+h2 .btn-group, h2 .btn-group-vertical, .image-custom {
+	position: relative;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.image-custom .text-success {display: none}
+
+
+
+
+/*Ajustes Home 2*/
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+  background: #21B1C1;
+}
+
+.nav>li>a>img {opacity: 0.5}
+.nav>li.active>a>img {opacity: 1;}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail img {width: 100%; border-radius: 4px 4px 0 0 }
+
+.thumbnail {padding: 0 0 20px 0; min-height: 400px; position: relative;}
+.thumbnail .ratings {position: absolute; left: 0; right: 0; bottom: 0}
+.ratings {padding: 0 8px}
+
+
+.nav-custom .nav-tabs {line-height: 10px; font-size: 14px; padding: 0}
+.nav-custom .nav-tabs a img {width: 16px}
+
+.popover {max-width: 100%}
+.popover.tour .popover-title{text-transform: uppercase;}
+.popover.tour .popover-title::before{
+    content: "\f19d"; 
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right:3px;}
+
+#tour{}
+#tour2 {margin-right: 5px}
+/*Image Hover */
+.containerHover {
+position:relative; 
+overflow: hidden;
+}
+
+.containerHover img {transition: all 0.5s ease; z-index: 1}
+.containerHover:hover img {
+  -webkit-transform:scale(1.10); /* Safari and Chrome */
+    -moz-transform:scale(1.10); /* Firefox */
+    -ms-transform:scale(1.10); /* IE 9 */
+    -o-transform:scale(1.10); /* Opera */
+     transform:scale(1.10);
+
+}
+
+.containerHover .hoverBtn {
+    transition: all 0.5s ease; 
+    position:absolute; 
+    left:7px; 
+    top:7px; 
+    right:7px ; 
+    bottom:7px; 
+    z-index:2;  
+    border-radius: 3px;
+    /*background:#fff; */
+    opacity: 0;
+    background-color:rgba(16, 16, 16, 0.4);
+    color: #fff}
+
+.containerHover:hover .hoverBtn {
+   transition: all 0.5s ease; 
+   opacity:1; 
+    /*background:#fff;*/
+}
+
+
+.containerHover .hoverBtn .btn {
+  transition: all 0.5s ease; 
+  position: absolute; 
+  top:55%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -75px;
+  background:#010101!important;
+  border-color: #333!important
+}
+
+.containerHover .hoverBtn .btn:hover {background: #222!important}
+
+.containerHover:hover .hoverBtn .btn {
+  top:50%;
+}
+
+.ratings .stars,.ratings .download {display: none}
+
+.ratings .preview {cursor: pointer}
+
+.nav-timeline, #alert-formato {display: none}
+
+.btn-preview .btn {pointer-events: none}
+
+.footer-timeline {border-top:2px solid #D9E0E9; background:#f1f1f1; padding-bottom:15px}
+
+
+/*Scrool*/
+#sidebar.affix {
+    top: 50px;
+  
+}
+
+.affix {
+    position: relative!important;
+    width: 100%; margin-bottom: 60px
+  
+}
+
+section {border-bottom: 1px solid #ccc; margin:0 0 25px; padding: 35px 10px 40px; margin-bottom: 0px}
+section h2 {font-size: 22px; margin-top:-80px; margin-bottom: 10px; padding-top:80px;color:#337ab7}
+
+
+.faq {overflow: hidden}
+.faq section {border-left: 3px solid #fff;}
+.faq .active {border-left: 3px solid #21B1C1}
+.faq .active h2 {color:#21B1C1}
+
+#sidebar li {padding:0;}
+#sidebar a {display: block; padding: 10px 15px;}
+#sidebar a:hover {background: #f1f1f1}
+
+#sidebar .active {border:1px solid #21B1C1;}
+#sidebar .active a {color: #fff; background: #21B1C1;}
+#sidebar .active a:hover{background: #21B1C1}
+
+
+
+
+/* Carousel */
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+    /* Control buttons  */
+    /* Previous button  */
+    /* Next button  */
+    /* Changes the position of the indicators */
+    /* Changes the color of the indicators */
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+    left: -60px;
+}
+#quote-carousel .carousel-control.right {
+    right: -60px;
+}
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #21B1C1;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .thumbnail {
+        min-height: 400px
+    }
+    .nav-custom .nav-tabs {
+        font-size: 23px;
+    }
+    .nav-custom .nav-tabs a img {
+        width: 30px
+    }
+    .thumbnail {
+        padding: 0
+    }
+    .affix {
+        position: fixed!important;
+        width: 240px;
+        bottom: 5px; 
+        overflow: scroll;
+        margin-bottom: 0px
+    }
+}
+
+blockquote .small:before, blockquote footer:before, blockquote small:before {content:none}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .thumbnail {
+        min-height: 390px
+    }
+    .affix {
+        width: 300px;
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    .thumbnail {
+        min-height: 420px;
+    }
+    .affix {
+        width: 360px;
+    }
+}
+
+
+
+/* Notification Bar */
+#notification-browser {position: fixed; top:50px; left: 0; right: 0; z-index: 9999; border-radius:0; display: none}
+.notification {padding-top: 100px!important}
+

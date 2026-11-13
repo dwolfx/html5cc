@@ -1,0 +1,164 @@
+body {
+    padding-top: 50px;
+   /* min-width: 768px;*/
+}
+
+
+
+/*.bg-home {
+    background: url(../images/bg01.jpg) top center;
+}*/
+
+.starter-template {
+    padding: 20px 15px;
+    text-align: left;
+}
+
+/*Start - Logotipos*/
+.logo:first-child {margin-left: 0}
+.logo {
+    display: inline-block;
+    background-image: url(../images/sprite_logotipos.png);
+    margin: 14px 7px 0;
+    height: 25px;
+    background-repeat: no-repeat
+}
+
+/*Usar essa classe somente no Plat Suite*/
+.plat-logo-suite {
+    background-position: 0 0;
+    width: 45px;
+}
+
+/*Usar essa classe quando se tem 2 logotipos no topo*/
+.plat-logo {
+    background-position: -60px 0;
+    width: 60px;
+    border-right: 1px solid #fff;/*DivisÃ£o dos logotipos*/
+}
+
+.flow-logo {
+    background-position: 0 -30px;
+    width: 90px;
+}
+
+.ghostcma-logo {
+    background-position: 0 -60px;
+    width: 110px;
+}
+
+.gmetrix-logo {
+    background-position: 0 -90px;
+    width: 100px;
+}
+
+.snapshots-logo {
+    background-position: 0 -120px;
+    width: 110px;
+}
+
+.documents-logo {
+    background-position: 0 -150px;
+    width: 65px;
+}
+
+.tvglobo-logo {
+    background-position: 0 -180px;
+    width: 120px;
+}
+
+.plat-logo-rodape {
+    margin-top: 10px;
+    background: url(../images/sprite_adTester_01.png) 0px -10px;
+    width: 185px;
+    height: 35px;
+    text-indent: -999px;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+/*End - Logotipos*/
+
+.navbar-fixed-top {
+    border: 0
+}
+
+.navbar-right .dropdown {
+    background: #5bc0de
+}
+
+.navbar-right .dropdown>a {
+    color: #fff!important
+}
+
+.navbar-right .dropdown>a:focus {
+    background: #39b3d7
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    background: #39b3d7!important;
+}
+
+.navbar-right .dropdown>a:focus {
+    background: #5bc0de!important;
+}
+
+.navbar-right .dropdown.open>a:focus {
+    background: #39b3d7!important;
+}
+
+
+
+
+
+
+
+/* Disable responsive 768 < 0
+@media (max-width: 769px) {
+    .container {
+    width: 768px!important;
+    }
+    .navbar-fixed-top {
+        top: 0!important;
+        width: 768px;
+        left: none;
+        right: none;
+        position: absolute!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        float: left;
+        margin: 0;
+    }
+    .navbar-nav > li {
+        float: left;
+    }
+    .navbar-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .navbar-nav.navbar-right:last-child {
+        margin-right: -15px;
+    }
+    .navbar-left {
+        float: left !important;
+    }
+    .navbar-right {
+        float: right !important;
+    }
+    .navbar-header {
+        float: left;
+    }
+    .navbar-form {
+        padding: 0;
+        border: 0
+    }
+    .navbar-nav {
+        float: left;
+        margin: 0 0 0 15px;
+    }
+}
+Disable Navbar responsive */

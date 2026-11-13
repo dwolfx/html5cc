@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Consulta Inventário para Afiliadas</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/starter-template.css" />
+    <link rel="stylesheet" type="text/css" href="css/template-globo.css" />
+<style>
+    .container-body{height:600px} 
+    .controles{
+        position: absolute;
+        bottom: 20px;
+        width: 98%;
+    }
+</style>
+
+</head>
+
+<body>
+   
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo plat-logo" href="./" title="Plat"></a>
+                <a class="logo tvglobo-logo" href="./" title="Plat"></a>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Consulta Inventário para Afiliadas</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            
+        </div>
+    </div>
+
+
+
+    <div class="container">
+
+        <div class="nav-custom">
+            <!-- Nav tabs -->
+            <ul class="nav nav-pills nav-stacked col-md-2" role="tablist" id="myTabs">
+                <li role="presentation" class="active">
+                    <a id="a-entrega" href="#entrega" aria-controls="entrega" role="tab" data-toggle="tab">
+                         Locais de entrega
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a id="a-targeting" href="#targeting" aria-controls="targeting" role="tab" data-toggle="tab">
+                       Targeting
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a id="a-consulta" href="#consulta" aria-controls="consulta" role="tab" data-toggle="tab">
+                        Consulta
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content col-md-10">
+
+                <div role="tabpanel" class="tab-pane fade in active" id="entrega">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 container-body">
+                                Entrega
+                                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                                <div class="input-group">
+                                 <input type="text" class="form-control" placeholder="Search for...">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                  </span>
+                                </div>
+                                
+                                    <label class="checkbox-inline">
+                                      <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                                    </label>
+                                    <label class="checkbox-inline">
+                                      <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                                    </label>
+                                    <label class="checkbox-inline">
+                                      <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                                    </label>
+                                
+                                
+                                <div class="controles" role="tablist" id="myTabs">
+                                    <a onclick="$('#a-targeting').click()"  aria-controls="targeting" role="tab" data-toggle="tab">
+                                        <button class="btn btn-primary" style="float:right">Próximo</button>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="targeting">
+                    <div class="container-fluid">
+                        <div class="row">
+                            
+                            <div class="col-sm-12 container-body">
+                                Target
+                                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                                
+                                <div class="controles" >
+                                    <a onclick="$('#a-entrega').click()"  aria-controls="entrega" role="tab" data-toggle="tab">
+                                        <button class="btn btn-default" style="float:left">Anterior</button>
+                                    </a> 
+                                    <a onclick="$('#a-consulta').click()"  aria-controls="consulta" role="tab" data-toggle="tab">
+                                        <button class="btn btn-primary" style="float:right">Próximo</button>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="consulta">
+                    <div class="container-fluid">
+                        <div class="row">
+                            
+                            <div class="col-sm-12 container-body">
+                                Consulta
+                                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                                
+                                <div class="controles">
+                                    <a onclick="$('#a-targeting').click()" aria-controls="targeting" role="tab" data-toggle="tab">
+                                        <button style="float:left" class="btn btn-default">Anterior</button>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69925233-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</html>

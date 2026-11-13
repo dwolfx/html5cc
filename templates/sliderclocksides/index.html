@@ -1,0 +1,507 @@
+
+<style type="text/css">
+    #teste {
+        position:absolute; 
+        left:0; 
+        top:0; 
+        right:0; 
+        bottom:0; 
+        float: left;
+        z-index: 9999999999;
+        opacity: 0.001;
+        color: none;
+        text-align: center;
+        font-family: verdana
+    }
+    #teste:hover {
+        opacity: 1;
+        color: #fff
+    }
+    #teste div{
+        position:absolute; 
+        left:0; 
+        top:190px; 
+        right:0; 
+        bottom:0; 
+        float: left;
+        font-size: 15px;
+        line-height: 70px;
+        color: #fff;
+       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+1,000000+100&0+15,1+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 1%, rgba(0,0,0,0) 15%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 1%,rgba(0,0,0,0) 15%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 1%,rgba(0,0,0,0) 15%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+
+
+
+    }
+</style>
+   <div id="teste" onClick="reply_click()" ><div>Clique para reiniciar a anima&ccedil&atildeo</div></div>
+
+
+                    <style id="classesCSS">
+                    
+
+                    /* Botão de Resetar animação */
+                    #box-ad .btnReset {position:absolute; cursor:pointer; display:block; background:#333; height:20px; width:20px; right:0; bottom:0; z-index:99999; border-radius:3px 0 0 0}
+                    #box-ad .btnReset:hover {background:blue}
+                    .arrow-left {
+                        width: 0; 
+                        height: 0; 
+                        margin:4px 6px;
+                        border-top: 6px solid transparent;
+                        border-bottom: 6px solid transparent; 	
+                        border-right:6px solid white; 
+                    }
+                    </style>
+                    
+                    <a href="#" onClick="reply_click()" title="Clique para Reiniciar">
+                        <div id="box-ad" class="animate" style="height: 250px; width: 300px;">
+                            <!-- resetar animação 
+                            <div onClick="resetaAnimacao(this)" class="btnReset" title="Rever Banner"><div class="arrow-left"></div></div>-->
+
+                            <div id="imagem_0" class=" ">
+                                <img src="JPG1.jpg" id="imag1" class="imag1" data-macroname="">
+                            </div>
+                            <div id="imagem_1" class="">
+                                <img src="JPG2.jpg" id="imag2" class="imag2" data-macroname="">
+                            </div>
+
+                            <div id="imagem_2" class="">
+                                <img src="JPG3.jpg" id="imag3" class="imag3" data-macroname="">
+                            </div>      
+
+                            <!--Imagem de Click to Action-->  
+                             <div id="imagem_3" class="">
+                                <img src="JPG4.jpg" id="imag4" class="imag4" data-macroname="">
+                            </div> 
+                            
+
+                        </div>                   
+                    </a>
+                    
+                    <style>
+                             #box-ad {  
+                                     position: relative; 
+                                     z-index: 1;  
+                                     overflow: hidden; 
+                            }
+                            .hiddenad{display:none}
+                            .animate{display:block}
+     
+                    </style>
+                                            
+                    <style id="durationCSS">   
+                        #box-ad.animate #imagem_{{X}} {
+                            -webkit-animation-name: anima_{{X}}; /* Safari */
+                               -moz-animation-name: anima_{{X}}; /* Mozila / Firefox */
+                                 -o-animation-name: anima_{{X}}; /* Opera */
+                                    animation-name: anima_{{X}};
+                            
+                             -webkit-animation-duration: {{total_duration}}; 
+                             -webkit-animation-timing-function: ease;
+                             -webkit-animation-iteration-count: 1; 
+                             -webkit-animation-direction: normal; -webkit-animation-delay: 0; 
+                             -webkit-animation-play-state: running; 
+                             -webkit-animation-fill-mode: forwards; 
+                        }
+                    </style>
+                    
+                    <style id="elemCSS">
+                        #imagem_{{X}} {
+                            position: absolute; z-index:{{zindeX}}
+                        } 
+                        
+                        @-webkit-keyframes anima_{{X}} { 
+                            0%,	{{delay}} { 
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+                                    
+                            } 
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{ 
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            } 
+                            {{delay_plus5_plusduration}}, 100%  { 
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            } 
+                        }
+                        
+                        @-moz-keyframes anima_{{X}} { 
+                            0%,	{{delay}} { 
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+                                    
+                            } 
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{ 
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            } 
+                            {{delay_plus5_plusduration}}, 100%  { 
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            } 
+                        }
+                        @-o-keyframes anima_{{X}} { 
+                            0%,	{{delay}} { 
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+                                    
+                            } 
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{ 
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            } 
+                            {{delay_plus5_plusduration}}, 100%  { 
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            } 
+                        }
+                        @keyframes anima_{{X}} { 
+                            0%,	{{delay}} { 
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+                                    
+                            } 
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{ 
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            } 
+                            {{delay_plus5_plusduration}}, 100%  { 
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            } 
+                        }
+                    </style>
+                    
+                    
+                    <script id="definitionsScript" type="text/javascript">bannerSize = [300,250];</script>
+
+                    
+                    <script type="text/javascript">
+                  
+                    duration = '15s';
+                    bannerElements = [];
+
+                    // ELEMENTOS DOS BANNERS
+                        
+                    var banners = [
+                                {
+                                    duration: 2,
+                                    entrada:{
+                                        from: "left",
+                                        alpha: false,
+                                        zoomout: false,
+                                        zoomin: false
+                                        
+                                    },
+                                    saida:{
+                                        to: "bottom",
+                                        alpha: false,
+                                        zoomout: false,
+                                        zoomin: false
+                                    }
+                                }
+                                ,
+                                {
+                                    duration: 2,
+                                    entrada:{
+                                        from: "top",
+                                        alpha: false,
+                                        zoomout: false,
+                                        zoomin: false
+                                        
+                                    },
+                                    saida:{
+                                        to: "left",
+                                        alpha: false,
+                                        zoomout: false,
+                                        zoomin: false
+                                    }
+                                }
+                                ,
+                                {
+                                    duration: 2,
+                                    entrada:{
+                                        from: "right",
+                                        alpha: false,
+                                        zoomout: false,
+                                        zoomin: false
+                                        
+                                    },
+                                    saida:{
+                                        to: "top",
+                                        alpha: false,
+                                        zoomout: false,
+                                        zoomin: false
+                                    }
+                                }
+                                ,
+                                
+                                {
+                                    duration: 2,
+                                    entrada:{
+                                        from: "bottom",
+                                        alpha: false,
+                                        zoomout: false,
+                                        zoomin: false
+                                        
+                                    },
+                                    saida:{
+                                        to: "center",
+                                        alpha: false,
+                                        zoomout: false,
+                                        zoomin: false
+                                    }
+                                }
+                                
+                            ];
+                        
+                       
+                        
+                        var elemCSSOriginal = document.getElementById("elemCSS").innerHTML;
+                        var durationCSSOrig = document.getElementById("durationCSS").innerHTML;                       
+                        
+                        
+                        
+                        function initBanner(){
+                            
+                            var totalTime = 0;
+                            
+                            for(b in banners)
+                                totalTime +=banners[b].duration;
+                            
+                            duration = totalTime+"s";
+                            
+                            for(i in banners){
+                            
+                                
+                                var temp = {
+                                'delay': '75%',
+                                'posicao_e_top': '0px',
+                                'posicao_s_top': '0px',
+                                'posicao_e_left': '0px',
+                                'posicao_s_left': '0px',
+                                'delay_plus5': '80%',
+                                'zoom_i':'1',
+                                'zoom_f':'1',
+                                'alpha_i':'1',
+                                'alpha_f':'1',
+                                'delay_plus5_plusduration_less5':'95%',
+                                'delay_plus5_plusduration': '100%'                                
+                                
+                                }
+                                
+                                duracao = banners[i].duration*100/totalTime;
+                                tempoInicio=0;
+                                j=i-1;
+                                while(j>=0){
+                                    tempoInicio += banners[j].duration;
+                                    j--;
+                                }
+                                
+                                iniciaEm = tempoInicio*100/totalTime;
+                                
+                                if(i>0 && iniciaEm-5>=5)
+                                    iniciaEm -=5
+                                
+                                
+                                temp.delay = iniciaEm+"%";
+                                temp.delay_plus5 = (iniciaEm+5)+"%";
+                                if(i>=1)
+                                    iniciaEm+=5
+                                temp.delay_plus5_plusduration_less5 = (iniciaEm+duracao-5)+"%";
+                                temp.delay_plus5_plusduration = (iniciaEm+duracao)+"%";
+                                
+                                switch (banners[i].entrada.from){
+                                    
+                                        
+                                         case 'right': 
+                                            temp.posicao_e_top= '0px';
+                                            temp.posicao_e_left= bannerSize[0]+"px";
+                                            break;
+                                        case 'left': 
+                                            temp.posicao_e_top= '0px';
+                                            temp.posicao_e_left= (-1*bannerSize[0])+"px";
+                                            break;
+                                        case 'top': 
+                                            temp.posicao_e_top= (-1*bannerSize[1])+"px",
+                                            temp.posicao_e_left= "0px";
+                                            break;
+                                        case 'bottom': 
+                                            
+                                            temp.posicao_e_top=  bannerSize[1]+"px";
+                                            temp.posicao_e_left= "0px";
+                                            break;
+                                        case 'center': 
+                                            temp.posicao_e_top= "0px",
+                                            temp.posicao_e_left= "0px";
+                                            break;
+                                }
+                                
+                                switch (banners[i].saida.to){
+                                        
+                                        case 'right':                                             
+                                            temp.posicao_s_top= '0px';
+                                            temp.posicao_s_left= (bannerSize[0])+"px";
+                                            break;
+                                        case 'left': 
+                                            temp.posicao_s_top= '0px';
+                                            temp.posicao_s_left= (-1*bannerSize[0])+"px";
+                                            break;
+                                        case 'top': 
+                                            temp.posicao_s_top=  (-1*bannerSize[1])+"px";
+                                            temp.posicao_s_left= "0px";
+                                            break;
+                                        case 'bottom': 
+                                            temp.posicao_s_top= (bannerSize[1])+"px",
+                                            temp.posicao_s_left= "0px";
+                                            break;
+                                        case 'center': 
+                                            temp.posicao_s_top= "0px",
+                                            temp.posicao_s_left= "0px";
+                                            break;
+                                }
+                                if(banners[i].entrada.zoomin){
+                                   // temp.posicao_e_top= (-1*bannerSize[1]/2)+'px';
+                                  //  temp.posicao_e_left= (-1*bannerSize[0]/2)+'px';
+                                    temp.zoom_i=2;
+                                    temp.zoom_f=1;
+                                }else{
+                                    temp.zoom_i=1;
+                                    temp.zoom_f=1;
+                                    
+                                }
+                                if(banners[i].entrada.alpha){
+                                    temp.alpha_i=0;
+                                    temp.alpha_f=1;
+                                } else {
+                                    temp.alpha_i=1;
+                                    temp.alpha_f=1;
+                                    
+                                }                               
+                                
+                                
+                                bannerElements.push(temp);
+                                
+                            }
+                            
+                            var novoCSSElem="", novoDurationCss="";
+                            var tempElemCss="";
+
+
+                            for(i in bannerElements){
+                                tempElemCss = elemCSSOriginal;
+                                tempElemCss = tempElemCss.replace(/\{\{X\}\}/gm, i).replace(/\{\{zindeX\}\}/gm, Number(i)+500);                            
+                                tempElemCss = tempElemCss.replace(/\{\{delay\}\}/gm, bannerElements[i].delay);
+                                tempElemCss = tempElemCss.replace(/\{\{delay_plus5\}\}/gm, bannerElements[i].delay_plus5);
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_e_top\}\}/gm, bannerElements[i].posicao_e_top);
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_s_top\}\}/gm, bannerElements[i].posicao_s_top);
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_e_left\}\}/gm, bannerElements[i].posicao_e_left);
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_s_left\}\}/gm, bannerElements[i].posicao_s_left);
+
+                                tempElemCss = tempElemCss.replace(/\{\{zoom_i\}\}/gm, bannerElements[i].zoom_i);
+                                tempElemCss = tempElemCss.replace(/\{\{zoom_f\}\}/gm, bannerElements[i].zoom_f);
+                                tempElemCss = tempElemCss.replace(/\{\{alpha_i\}\}/gm, bannerElements[i].alpha_i);
+                                tempElemCss = tempElemCss.replace(/\{\{alpha_f\}\}/gm, bannerElements[i].alpha_f);
+
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_s_top\}\}/gm, bannerElements[i].posicao_s_top);
+                                tempElemCss = tempElemCss.replace(/\{\{delay_plus5_plusduration_less5\}\}/gm, bannerElements[i].delay_plus5_plusduration_less5);
+                                tempElemCss = tempElemCss.replace(/\{\{delay_plus5_plusduration\}\}/gm, bannerElements[i].delay_plus5_plusduration);
+                                if(tempElemCss!=undefined){
+                                    novoCSSElem += tempElemCss;
+                                    novoDurationCss += durationCSSOrig.replace(/\{\{X\}\}/gm, i).replace(/\{\{total_duration\}\}/gm,duration);
+                                }
+                            }
+
+                            document.getElementById("elemCSS").innerHTML = novoCSSElem;
+                            document.getElementById("durationCSS").innerHTML = novoDurationCss;
+                            document.getElementById("box-ad").className = "hiddenad";
+                            setTimeout(function(){document.getElementById("box-ad").className = "animate"},100);
+                            
+                        }
+                    
+                        initBanner();
+                        function reply_click()
+                        {
+                            initBanner();
+                        }
+
+                    </script>
+
+                    

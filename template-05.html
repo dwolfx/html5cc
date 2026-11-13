@@ -1,0 +1,984 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Criador de peças, criativos e banners HTML5 e CSS3 desenvolvido pela Globo.">
+    <meta name="keywords" content="html5, css3, criador, peças, criativo, criador de HTML5, criador de banner, creative, creator, creative creator"/>
+    <meta name="copyright" content="Globo">
+    <meta name="author" content="Bruno Biagioni Neto, William Hessel da Cunha"/>
+    <!-- Social image -->
+    <meta property="og:title" content="Zoom in - Criador de Peça HTML5CC" />
+    <meta property="og:description" content="Criador de peças, criativos e banners HTML5 e CSS3 desenvolvido pela Globo." />
+    <meta property="og:url" content="https://cgcmd.globo.com/html5cc/" />
+    <meta property="og:image" content="https://cgcmd.globo.com/html5cc/images/share-social.jpg" />
+
+    <title>Zoom in - Criador de Peça HTML5CC</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-tour.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/starter-template.css" />
+    <link rel="stylesheet" type="text/css" href="css/template-globo.css" />
+
+
+                    <style id="o_durationCSS">
+                        #box-ad.animate #imagem_{{X}} {
+                            -webkit-animation-name: anima_{{X}}; /* Safari */
+                               -moz-animation-name: anima_{{X}}; /* Mozila / Firefox */
+                                 -o-animation-name: anima_{{X}}; /* Opera */
+                                    animation-name: anima_{{X}};
+
+                             -webkit-animation-duration: {{total_duration}};
+                             -webkit-animation-timing-function: ease;
+                             -webkit-animation-iteration-count: 1;
+                             -webkit-animation-direction: normal;
+                             -webkit-animation-delay: 0;
+                             -webkit-animation-play-state: running;
+                             -webkit-animation-fill-mode: forwards;
+
+                             -moz-animation-duration: {{total_duration}};
+                             -moz-animation-timing-function: ease;
+                             -moz-animation-iteration-count: 1;
+                             -moz-animation-direction: normal;
+                             -moz-animation-delay: 0;
+                             -moz-animation-play-state: running;
+                             -moz-animation-fill-mode: forwards;
+
+                             -oo-animation-duration: {{total_duration}};
+                             -oo-animation-timing-function: ease;
+                             -oo-animation-iteration-count: 1;
+                             -oo-animation-direction: normal;
+                             -oo-animation-delay: 0;
+                             -oo-animation-play-state: running;
+                             -oo-animation-fill-mode: forwards;
+
+                             animation-duration: {{total_duration}};
+                             animation-timing-function: ease;
+                             animation-iteration-count: 1;
+                             animation-direction: normal;
+                             animation-delay: 0;
+                             animation-play-state: running;
+                             animation-fill-mode: forwards;
+                        }
+                    </style>
+
+                    <style id="o_elemCSS">
+                        #imagem_{{X}} {
+                            position: absolute; z-index:{{zindeX}}
+                        }
+
+                        @-webkit-keyframes anima_{{X}} {
+                            0%,	{{delay}} {
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+
+                            }
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            }
+                            {{delay_plus5_plusduration}}, 100%  {
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            }
+                        }
+
+                        @-moz-keyframes anima_{{X}} {
+                            0%,	{{delay}} {
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+
+                            }
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            }
+                            {{delay_plus5_plusduration}}, 100%  {
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            }
+                        }
+                        @-o-keyframes anima_{{X}} {
+                            0%,	{{delay}} {
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+
+                            }
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            }
+                            {{delay_plus5_plusduration}}, 100%  {
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            }
+                        }
+                        @keyframes anima_{{X}} {
+                            0%,	{{delay}} {
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+
+                            }
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            }
+                            {{delay_plus5_plusduration}}, 100%  {
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            }
+                        }
+                    </style>
+
+
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-tour.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-69925233-3', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="js/tour-pages.js"></script>
+<script type="text/javascript" src="js/jquery-browser.js"></script>
+
+<script src="dist/jszip.min.js"></script>
+<script src="vendor/FileSaver.js"></script>
+<script type="text/javascript">
+
+var newPecaHTML5, oldPecaHTML5;
+var sz = window.location.search.replace("?","").replace("#","").split("x");
+var finalW = sz[0];
+var finalH = sz[1];
+
+bannerSize = [finalW,finalH];
+
+//configura o botão de file upload
+function setConfig(){
+
+// ADICIONA OS HANDLERS
+
+
+document.getElementById('File1').addEventListener('change', function(e){readSingleFile("File1")}, false);
+document.getElementById('File2').addEventListener('change', function(e){readSingleFile("File2")}, false);
+document.getElementById('File3').addEventListener('change', function(e){readSingleFile("File3")}, false);
+document.getElementById('File4').addEventListener('change', function(e){readSingleFile("File4")}, false);
+// document.getElementById('File5').addEventListener('change', function(e){readSingleFile("File5")}, false);
+}
+
+</script>
+
+</head>
+
+<body class="interna">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo plat-logo" href="https://cgcmd.globo.com/plat/" title="Plat" target="_blank"></a>
+                <a class="logo tvglobo-logo" href="./" title="Plat"></a>
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="display:none">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="tour7"><a href="http://anuncie.globo.com/redeglobo/formatos/index.html" target="_blank">Manuais de Formatos TV Globo</a></li>
+                  <li class="tour8"><a href="./perguntas-frequentes.html">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>
+                        Zoom in
+
+                        <a href="index.html" class="pull-right btn btn-default"><i class="fa fa-arrow-left"></i> Voltar aos templates</a>
+                        <div class="btn btn-default pull-right" id="tour2" ><i class="fa fa-graduation-cap"></i> Como usar</div>
+                    </h2>
+                    <p >Todas imagens entram como Zoom por cima umas das outras, elas ficam fixas ao centro.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="background:#fff">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <h3>
+                    Formato
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="formato_selecionado">300 x 250 - Retângulo Médio</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#" data-formato="300x50">300 x 50 - Banner Mobile</a></li>
+                            <li><a href="#" data-formato="320x50">320 x 50 - Banner Mobile</a></li>
+                            <li><a href="#" data-formato="300x250">300 x 250 - Retângulo Médio</a></li>
+                            <li><a href="#" data-formato="300x600">300 x 600 - Meia Página</a></li>
+                            <li><a href="#" data-formato="600x300">600 x 300 - Megabox</a></li>
+                            <li><a href="#" data-formato="970x90">970 x 90 - Superleaderboard</a></li>
+                            <li><a href="#" data-formato="970x150">970 x 150 - Maxiboard</a></li>
+                            <li><a href="#" data-formato="970x250">970 x 250 - Billboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                      <a href="javascript:void[0];" class="btn btn-info active nocursor">4 Imagens</a>
+                    </div>
+
+                    <label id="loop" for="active-looping" class="btn btn-default pull-right"><i class="fa fa-undo"></i> Ativar Loop <input type="checkbox" id="active-looping" /></label>
+                </h3>
+
+                <br>
+
+                <div class="alert alert-warning" role="alert" id="alert-formato">
+                    <strong>Aviso:</strong> Selecione o tipo de formato no Dropdown acima.
+                </div>
+                <ul class="nav nav-pills nav-justified nav-timeline">
+
+                    <li>
+                        <a href="#" >
+                            <div class="action-img">
+                                <div class="thumb-animation zoom-in" id="btn-action-01" style=""></div>
+                            </div>
+                            <div class="content-img add">
+                                <div class="name">Imagem 1</div>
+                                <button class="btn btn-xs btn-primary" onclick="$('#File1').click();">Adicionar</button>
+                                <input id="File1" class="btn btn-xs btn-primary" style="display:none" type="file" ></input>
+                                <div class="img-thumb">
+                                    <img src="images/img-default.png" alt="" id="demoFile1">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="opaca">
+                            <div class="action-img add">
+                                <div class="thumb-animation zoom-in" id="btn-action-02"></div>
+                            </div>
+                            <div class="content-img add">
+                                <div class="name">Imagem 2</div>
+                                <button class="btn btn-xs btn-default" onclick="$('#File2').click();">Aguardando anterior</button>
+                                <input id="File2" class="btn btn-xs btn-primary" style="display:none" type="file" ></input>
+                                <div class="img-thumb">
+                                    <img src="images/img-default.png" alt="" id="demoFile2" >
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="opaca">
+                            <div class="action-img add">
+                                <div class="thumb-animation zoom-in" id="btn-action-03"></div>
+                            </div>
+                            <div class="content-img add" >
+                                <div class="name">Imagem 3</div>
+                                <button class="btn btn-xs btn-default" onclick="$('#File3').click();">Aguardando anterior</button>
+                                <input id="File3" class="btn btn-xs btn-primary" style="display:none" type="file" ></input>
+                                <div class="img-thumb">
+                                    <img src="images/img-default.png" alt="" id="demoFile3"  >
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="opaca">
+                            <div class="action-img add">
+                                <div class="thumb-animation zoom-in" id="btn-action-04"></div>
+                            </div>
+                            <div class="content-img add">
+                                <div class="name">Imagem 4</div>
+                                <button class="btn btn-xs btn-default" onclick="$('#File4').click();">Aguardando anterior</button>
+                                <input id="File4" class="btn btn-xs btn-primary" style="display:none" type="file" ></input>
+                                <div class="img-thumb">
+                                    <img src="images/img-default.png" alt="" id="demoFile4"   >
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <br>
+
+
+
+            </div>
+        </div>
+        <div class="row footer-timeline">
+            <div class="col-sm-6">
+                <h4>Testar Peça</h4>
+                <div class="pull-left btn-preview">
+                    <button class="btn btn-default bt_ready" data-toggle="modal" data-target="#complete-dialog"  onclick="preview()"  disabled><i class="fa fa-search"></i> Preview da peça</button>
+                </div>
+            </div>
+            <div class="col-sm-6 text-right">
+                <h4>Download ZIP</h4>
+                <div class="pull-right btn-preview">
+                    <button class="btn btn-default  bt_ready"  onclick="Salvar()" disabled><i class="fa fa-download"></i> Baixar Pacote Flow</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Modal de mensagem do Tour -->
+    <div class="modal fade" id="modalEscape" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">FIM DO TOUR!</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="images/obrigado-tour.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- TEMPLATE ENTRA AQUI DENTRO DO MODAL COMPLETE-DIALOG-->
+
+
+    <div id="complete-dialog" class="modal fade" tabindex="-1">
+
+        <div class="modal-dialog" style="margin-top:100px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Resultado da peça HTML5</h4>
+            </div>
+            <div class="modal-body">
+
+                 <div id="pecaHTML5" class="">
+
+
+                    <style id="classesCSS">
+
+
+                    /* Botão de Resetar animação */
+                    #box-ad .btnReset {position:absolute; cursor:pointer; display:block; background:#333; height:20px; width:20px; right:0; bottom:0; z-index:99999; border-radius:3px 0 0 0}
+                    #box-ad .btnReset:hover {background:blue}
+                    .arrow-left {
+                        width: 0;
+                        height: 0;
+                        margin:4px 6px;
+                        border-top: 6px solid transparent;
+                        border-bottom: 6px solid transparent;
+                        border-right:6px solid white;
+                    }
+                    </style>
+
+                    <script type="text/javascript">
+                        var clickTag = "";
+                    </script>
+
+                    <a href="javascript:window.open(clickTag, '_blank');void(0);">
+                        <div id="box-ad" class="animate" >
+                            <!-- resetar animação
+                            <div onClick="resetaAnimacao(this)" class="btnReset" title="Rever Banner"><div class="arrow-left"></div></div>-->
+
+                            <div id="imagem_0" class=" ">
+                                <img src="" id="imag1" class="imag1">
+                            </div>
+                            <div id="imagem_1" class="">
+                                <img src="" id="imag2" class="imag2">
+                            </div>
+
+                            <div id="imagem_2" class="">
+                                <img src="" id="imag3" class="imag3">
+                            </div>
+
+                            <!--Imagem de Click to Action-->
+                             <div id="imagem_3" class="">
+                                <img src="" id="imag4" class="imag4">
+                            </div>
+
+
+                        </div>
+                    </a>
+
+                    <style>
+                             #box-ad {
+                                     position: relative;
+                                     z-index: 1;
+                                     overflow: hidden;
+                            }
+                            .hiddenad{display:none}
+                            .animate{display:block}
+
+                    </style>
+
+                    <style id="durationCSS">
+                        #box-ad.animate #imagem_{{X}} {
+                            -webkit-animation-name: anima_{{X}}; /* Safari */
+                               -moz-animation-name: anima_{{X}}; /* Mozila / Firefox */
+                                 -o-animation-name: anima_{{X}}; /* Opera */
+                                    animation-name: anima_{{X}};
+
+                             -webkit-animation-duration: {{total_duration}};
+                             -webkit-animation-timing-function: ease;
+                             -webkit-animation-iteration-count: 1;
+                             -webkit-animation-direction: normal;
+                             -webkit-animation-delay: 0;
+                             -webkit-animation-play-state: running;
+                             -webkit-animation-fill-mode: forwards;
+
+                             -moz-animation-duration: {{total_duration}};
+                             -moz-animation-timing-function: ease;
+                             -moz-animation-iteration-count: 1;
+                             -moz-animation-direction: normal;
+                             -moz-animation-delay: 0;
+                             -moz-animation-play-state: running;
+                             -moz-animation-fill-mode: forwards;
+
+                             -oo-animation-duration: {{total_duration}};
+                             -oo-animation-timing-function: ease;
+                             -oo-animation-iteration-count: 1;
+                             -oo-animation-direction: normal;
+                             -oo-animation-delay: 0;
+                             -oo-animation-play-state: running;
+                             -oo-animation-fill-mode: forwards;
+
+                             animation-duration: {{total_duration}};
+                             animation-timing-function: ease;
+                             animation-iteration-count: 1;
+                             animation-direction: normal;
+                             animation-delay: 0;
+                             animation-play-state: running;
+                             animation-fill-mode: forwards;
+                        }
+                    </style>
+
+                    <style id="elemCSS">
+                        #imagem_{{X}} {
+                            position: absolute; z-index:{{zindeX}}
+                        }
+
+                        @-webkit-keyframes anima_{{X}} {
+                            0%,	{{delay}} {
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+
+                            }
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            }
+                            {{delay_plus5_plusduration}}, 100%  {
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            }
+                        }
+
+                        @-moz-keyframes anima_{{X}} {
+                            0%,	{{delay}} {
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+
+                            }
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            }
+                            {{delay_plus5_plusduration}}, 100%  {
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            }
+                        }
+                        @-o-keyframes anima_{{X}} {
+                            0%,	{{delay}} {
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+
+                            }
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            }
+                            {{delay_plus5_plusduration}}, 100%  {
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            }
+                        }
+                        @keyframes anima_{{X}} {
+                            0%,	{{delay}} {
+                                top:{{posicao_e_top}};
+                                left: {{posicao_e_left}};
+                                -webkit-transform: scale({{zoom_i}});
+                                -moz-transform: scale({{zoom_i}});
+                                -ms-transform: scale({{zoom_i}});
+                                -o-transform: scale({{zoom_i}});
+                                transform: scale({{zoom_i}});
+                                opacity: {{alpha_i}};
+
+                            }
+                            {{delay_plus5}}, {{delay_plus5_plusduration_less5}}{
+                                top:0px;
+                                left:0px;
+                                -webkit-transform: scale(1);
+                                -moz-transform: scale(1);
+                                -ms-transform: scale(1);
+                                -o-transform: scale(1);
+                                transform: scale(1);
+                                opacity: {{alpha_f}};
+                            }
+                            {{delay_plus5_plusduration}}, 100%  {
+                                top:{{posicao_s_top}};
+                                left: {{posicao_s_left}};
+                                 -webkit-transform: scale({{zoom_f}});
+                                -moz-transform: scale({{zoom_f}});
+                                -ms-transform: scale({{zoom_f}});
+                                -o-transform: scale({{zoom_f}});
+                                transform: scale({{zoom_f}});
+                                opacity: {{alpha_f}};
+                            }
+                        }
+                    </style>
+
+
+                    <script id="definitionsScript" type="text/javascript">
+                    // ELEMENTOS DOS BANNERS
+
+                    var banners = [
+                                {
+                                    duration: 3,
+                                    entrada:{
+                                        from: "center",
+                                        alpha: true,
+                                        zoomout: false,
+                                        zoomin: true
+
+                                    },
+                                    saida:{
+                                        to: "center",
+                                        alpha: true,
+                                        zoomout: false,
+                                        zoomin: false
+                                    }
+                                }
+                                ,
+                                {
+                                    duration: 3,
+                                    entrada:{
+                                        from: "center",
+                                        alpha: true,
+                                        zoomout: false,
+                                        zoomin: true
+
+                                    },
+                                    saida:{
+                                        to: "center",
+                                        alpha: true,
+                                        zoomout: false,
+                                        zoomin: false
+                                    }
+                                }
+                                ,
+                                {
+                                    duration: 3,
+                                    entrada:{
+                                        from: "center",
+                                        alpha: true,
+                                        zoomout: false,
+                                        zoomin: true
+
+                                    },
+                                    saida:{
+                                        to: "center",
+                                        alpha: true,
+                                        zoomout: false,
+                                        zoomin: false
+                                    }
+                                }
+                                ,
+
+                                {
+                                    duration: 3,
+                                    entrada:{
+                                        from: "center",
+                                        alpha: true,
+                                        zoomout: false,
+                                        zoomin: true
+
+                                    },
+                                    saida:{
+                                        to: "center",
+                                        alpha: true,
+                                        zoomout: false,
+                                        zoomin: false
+                                    }
+                                }
+
+                            ];
+                    </script>
+
+
+                    <script type="text/javascript">
+
+                    duration = '12s';
+                    bannerElements = [];
+
+
+
+
+
+                        var elemCSSOriginal = document.getElementById("elemCSS").innerHTML;
+                        var durationCSSOrig = document.getElementById("durationCSS").innerHTML;
+
+
+
+                        function initBanner(){
+
+                            var totalTime = 0;
+
+                            for(b in banners)
+                                totalTime +=banners[b].duration;
+
+                            duration = totalTime+"s";
+
+                            for(i in banners){
+
+
+                                var temp = {
+                                'delay': '75%',
+                                'posicao_e_top': '0px',
+                                'posicao_s_top': '0px',
+                                'posicao_e_left': '0px',
+                                'posicao_s_left': '0px',
+                                'delay_plus5': '80%',
+                                'zoom_i':'1',
+                                'zoom_f':'1',
+                                'alpha_i':'1',
+                                'alpha_f':'1',
+                                'delay_plus5_plusduration_less5':'95%',
+                                'delay_plus5_plusduration': '100%'
+
+                                }
+
+                                duracao = banners[i].duration*100/totalTime;
+                                tempoInicio=0;
+                                j=i-1;
+                                while(j>=0){
+                                    tempoInicio += banners[j].duration;
+                                    j--;
+                                }
+
+                                iniciaEm = tempoInicio*100/totalTime;
+
+                                if(i>0 && iniciaEm-5>=5)
+                                    iniciaEm -=5
+
+
+                                temp.delay = iniciaEm+"%";
+                                temp.delay_plus5 = (iniciaEm+5)+"%";
+                                if(i>=1)
+                                    iniciaEm+=5
+                                temp.delay_plus5_plusduration_less5 = (iniciaEm+duracao-5)+"%";
+                                temp.delay_plus5_plusduration = (iniciaEm+duracao)+"%";
+
+                                switch (banners[i].entrada.from){
+
+
+                                         case 'right':
+                                            temp.posicao_e_top= '0px';
+                                            temp.posicao_e_left= bannerSize[0]+"px";
+                                            break;
+                                        case 'left':
+                                            temp.posicao_e_top= '0px';
+                                            temp.posicao_e_left= (-1*bannerSize[0])+"px";
+                                            break;
+                                        case 'top':
+                                            temp.posicao_e_top= (-1*bannerSize[1])+"px",
+                                            temp.posicao_e_left= "0px";
+                                            break;
+                                        case 'bottom':
+
+                                            temp.posicao_e_top=  bannerSize[1]+"px";
+                                            temp.posicao_e_left= "0px";
+                                            break;
+                                        case 'center':
+                                            temp.posicao_e_top= "0px",
+                                            temp.posicao_e_left= "0px";
+                                            break;
+                                }
+
+                                switch (banners[i].saida.to){
+
+                                        case 'right':
+                                            temp.posicao_s_top= '0px';
+                                            temp.posicao_s_left= (bannerSize[0])+"px";
+                                            break;
+                                        case 'left':
+                                            temp.posicao_s_top= '0px';
+                                            temp.posicao_s_left= (-1*bannerSize[0])+"px";
+                                            break;
+                                        case 'top':
+                                            temp.posicao_s_top=  (-1*bannerSize[1])+"px";
+                                            temp.posicao_s_left= "0px";
+                                            break;
+                                        case 'bottom':
+                                            temp.posicao_s_top= (bannerSize[1])+"px",
+                                            temp.posicao_s_left= "0px";
+                                            break;
+                                        case 'center':
+                                            temp.posicao_s_top= "0px",
+                                            temp.posicao_s_left= "0px";
+                                            break;
+                                }
+                                if(banners[i].entrada.zoomin){
+                                   // temp.posicao_e_top= (-1*bannerSize[1]/2)+'px';
+                                  //  temp.posicao_e_left= (-1*bannerSize[0]/2)+'px';
+                                    temp.zoom_i=2;
+                                    temp.zoom_f=1;
+                                }else{
+                                    temp.zoom_i=1;
+                                    temp.zoom_f=1;
+
+                                }
+                                if(banners[i].entrada.alpha){
+                                    temp.alpha_i=0;
+                                    temp.alpha_f=1;
+                                } else {
+                                    temp.alpha_i=1;
+                                    temp.alpha_f=1;
+
+                                }
+
+
+                                bannerElements.push(temp);
+
+                            }
+
+                            var novoCSSElem="", novoDurationCss="";
+                            var tempElemCss="";
+
+
+                            for(i in bannerElements){
+                                tempElemCss = elemCSSOriginal;
+                                tempElemCss = tempElemCss.replace(/\{\{X\}\}/gm, i).replace(/\{\{zindeX\}\}/gm, Number(i)+500);
+                                tempElemCss = tempElemCss.replace(/\{\{delay\}\}/gm, bannerElements[i].delay);
+                                tempElemCss = tempElemCss.replace(/\{\{delay_plus5\}\}/gm, bannerElements[i].delay_plus5);
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_e_top\}\}/gm, bannerElements[i].posicao_e_top);
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_s_top\}\}/gm, bannerElements[i].posicao_s_top);
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_e_left\}\}/gm, bannerElements[i].posicao_e_left);
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_s_left\}\}/gm, bannerElements[i].posicao_s_left);
+
+                                tempElemCss = tempElemCss.replace(/\{\{zoom_i\}\}/gm, bannerElements[i].zoom_i);
+                                tempElemCss = tempElemCss.replace(/\{\{zoom_f\}\}/gm, bannerElements[i].zoom_f);
+                                tempElemCss = tempElemCss.replace(/\{\{alpha_i\}\}/gm, bannerElements[i].alpha_i);
+                                tempElemCss = tempElemCss.replace(/\{\{alpha_f\}\}/gm, bannerElements[i].alpha_f);
+
+                                tempElemCss = tempElemCss.replace(/\{\{posicao_s_top\}\}/gm, bannerElements[i].posicao_s_top);
+                                tempElemCss = tempElemCss.replace(/\{\{delay_plus5_plusduration_less5\}\}/gm, bannerElements[i].delay_plus5_plusduration_less5);
+                                tempElemCss = tempElemCss.replace(/\{\{delay_plus5_plusduration\}\}/gm, bannerElements[i].delay_plus5_plusduration);
+                                if(tempElemCss!=undefined){
+                                    novoCSSElem += tempElemCss;
+                                    novoDurationCss += durationCSSOrig.replace(/\{\{X\}\}/gm, i).replace(/\{\{total_duration\}\}/gm,duration);
+                                }
+                            }
+
+                            document.getElementById("elemCSS").innerHTML = novoCSSElem;
+                            document.getElementById("durationCSS").innerHTML = novoDurationCss;
+                            document.getElementById("box-ad").className = "hiddenad";
+                            document.getElementById("box-ad").style.width=(bannerSize[0]-2)+"px";
+                            document.getElementById("box-ad").style.height=(bannerSize[1]-2)+"px";
+                            document.getElementById("box-ad").style.border="1px solid #dddddd";
+                            setTimeout(function(){document.getElementById("box-ad").className = "animate"},100);
+
+                        }
+
+                        initBanner();
+
+                    </script>
+
+                    </div>  <!-- Fim pecaHTML5 -->
+
+              </div>
+
+              <!--div class="modal-footer" style="padding-top: 13px">
+                <button type="button" class="btn btn-primary" style="float:left" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-raised btn-success" onclick="Salvar()" style="float: right;" data-dismiss="modal">Download</button>
+                <div class="form-group" style="width: 200px;float: right; margin-top:0px;margin-right:10px">
+                        <span class="radio">
+                            <label>
+                              <input type="radio" name="destino" value="Flow" checked=""><span class="circle"></span><span class="check"></span><span class="circle"></span><span class="check"></span>
+                              Flow
+                            </label>
+
+
+                            <label>
+                              <input type="radio" name="destino" value="DFP"><span class="circle"></span><span class="check"></span><span class="circle"></span><span class="check"></span>
+                              DFP
+                            </label>
+                        </span>
+                </div>
+              </div -->
+
+            </div>
+      </div>
+    </div>
+
+   <!-- TEMPLATE TERMINA AQUI -->
+
+
+<canvas id="canvas" style="display:none"></canvas>
+
+</body>
+
+
+
+
+<script type="text/javascript" src="js/geradorHTML5.js"></script>
+
+
+</html>
+
